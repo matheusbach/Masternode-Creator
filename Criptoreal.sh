@@ -20,8 +20,9 @@ tar -xzvf Criptoreal-Linux.tar.gz
 sleep 40
 ./criptoreal-cli stop
 
-echo "Qual o IP da sua VPS ?"
-read ipvps
+ipvps=`wget -qO- ifconfig.co/ip`
+
+echo "Seu ip é $ipvps"
 echo
 echo "Qual sua Genkey ?"
 read genkey
