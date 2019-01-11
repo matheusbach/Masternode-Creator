@@ -2,8 +2,8 @@
 cd
 echo "Bem vindo ao Scrypts da Bitnoob"
 sleep 3 
-echo "Será iniciado a Instalação/Montagem do Masternode de Cerberus"
-sleep 5
+echo "Será iniciado a Instalação/Montagem do Masternode de Cerberus v1.0"
+sleep 3
 echo "Instalando Pré-Requisitos..."
 sleep 3 
 sudo apt-get update && sudo apt-get upgrade
@@ -11,12 +11,12 @@ sudo apt-get install unzip nano -y
 sudo apt-get install git
 
 echo "Instalando Node..."
+sleep 3
 wget https://github.com/cerberuscore/cerberus/releases/download/0.12.1.3/cerberus_120103_linux.tar.gz
-sleep 30
 tar -xzvf cerberus_120103_linux.tar.gz
 cd cerberus_120103_linux
 ./cerberusd &
-sleep 10
+sleep 40
 ./cerberus-cli stop
 
 echo "Seu ip é $ipvps"
@@ -252,7 +252,7 @@ sleep 3
 cd 
 cd cerberus_120103_linux
 ./cerberusd &
-sleep 20
+sleep 30
 ./cerberus-cli mnsync status
 echo "Se os parametros foram true e a transação na wallet do seu computador ja estiver confirmada, pode iniciar o Masternode"
 echo "Caso não for true, aguarde mais alguns minutos e use os comandos"
