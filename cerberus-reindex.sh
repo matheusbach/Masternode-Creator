@@ -1,5 +1,4 @@
 #!/bin/bash
-cd
 echo "BEM VINDO AOS SCRYPTS DO CANAL BITNOOB!!!"
 sleep 3
 echo "Será iniciado a Reatualização dos blocos da wallet de Cerberus!"
