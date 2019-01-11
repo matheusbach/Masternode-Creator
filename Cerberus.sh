@@ -1,16 +1,16 @@
 #!/bin/bash
 cd
 echo "Bem vindo ao Scrypts da Bitnoob"
-echo 
+sleep 3 
 echo "Será iniciado a Instalação/Montagem do Masternode de Cerberus"
-
-echo "Instalando Pré-Requisitos"
-echo 
+sleep 5
+echo "Instalando Pré-Requisitos..."
+sleep 3 
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
 sudo apt-get install git
 
-echo "Instalando Node"
+echo "Instalando Node..."
 wget https://github.com/cerberuscore/cerberus/releases/download/0.12.1.3/cerberus_120103_linux.tar.gz
 sleep 30
 tar -xzvf cerberus_120103_linux.tar.gz
@@ -19,10 +19,8 @@ cd cerberus_120103_linux
 sleep 10
 ./cerberus-cli stop
 
-ipvps=`wget -qO- ifconfig.co/ip`
-
 echo "Seu ip é $ipvps"
-echo
+read ipvps
 echo "Qual sua Genkey ?"
 read genkey
 echo "Escreva um nome de usuario !"
@@ -250,6 +248,7 @@ echo "externalip="$ipvps >> ~/.cerberuscore/cerberus.conf
 echo "masternodeprivkey="$genkey >> ~/.cerberuscore/cerberus.conf
 
 echo "Iniciando Masternode..."
+sleep 3
 cd 
 cd cerberus_120103_linux
 ./cerberusd &
