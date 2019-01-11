@@ -9,7 +9,7 @@ cd
 cd cerberus_120103_linux
 ./cerberus-cli stop
 sleep 5
-echo "Reiniciando sincronização dos Blocos...!
+echo "Reiniciando sincronização dos Blocos...!"
 ./cerberusd -reindex
 sleep 5
 ./cerberus-cli mnsync status
