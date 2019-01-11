@@ -20,3 +20,4 @@ echo "cd"
 echo "cd cerberus_120103_linux"
 echo "./cerberus-cli mnsync status"
 echo "Faça isso de tempos em tempos até que note que ja está em true para iniciar o masternode na wallet em seu computador"
+mv ~/cerberus-reindex.sh ~/cerberus_120103_linux
