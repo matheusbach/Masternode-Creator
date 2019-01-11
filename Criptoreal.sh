@@ -10,7 +10,7 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
 sudo apt-get install git
 
-echo "Instalando Node"
+echo "Instalando Node..."
 sleep 3
 mkdir crs
 cd crs
