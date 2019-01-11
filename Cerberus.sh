@@ -1,6 +1,6 @@
 #!/bin/bash
 cd
-echo "Bem vindo ao Scrypts da Bitnoob"
+echo "BEM VINDO AOS SCRYPTS DO CANAL BITNOOB!!!"
 sleep 3 
 echo "Será iniciado a Instalação/Montagem do Masternode de Cerberus v1.0"
 sleep 3
@@ -260,4 +260,5 @@ echo "cd"
 echo "cd cerberus_120103_linux"
 echo "./cerberus-cli mnsync status"
 echo "Faça isso de tempos em tempos até que note que ja está em true para iniciar o masternode na wallet em seu computador"
-echo "Agradecemos ao Diogo Neves e ao site https://staking.world/Pages/index.aspx pela ajuda, porque sem ele não teriamos esse scrypt, Att. Bitnoob - Vinicius Ferreiro"
+echo "AGRADECIMENTOS A DIEGO NEVES DO SITE https://staking.world/Pages/index.aspx E A MATHEUS BACH, SEM ELES NAO SERIA POSSIVEL ESTE SCRYPT."
+echo "Att. Vinicius Ferreiro - Canal Bitnoob
