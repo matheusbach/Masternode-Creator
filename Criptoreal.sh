@@ -1,29 +1,27 @@
 #!/bin/bash
 cd
 echo "Bem vindo ao Scrypts da Bitnoob"
-echo 
-echo "Será iniciado a Instalação/Montagem do Masternode de Criptoreal"
-
+sleep 3
+echo "Será iniciado a Instalação/Montagem do Masternode de Criptoreal v1.0"
+sleep 3
 echo "Instalando Pré-Requisitos"
-echo 
+sleep 3
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
 sudo apt-get install git
 
 echo "Instalando Node"
+sleep 3
 mkdir crs
 cd crs
 wget https://github.com/CriptoReal/Criptoreal/releases/download/v1.2.0/Criptoreal-Linux.tar.gz
-sleep 30
 tar -xzvf Criptoreal-Linux.tar.gz
 ./criptoreald &
 sleep 40
 ./criptoreal-cli stop
 
-ipvps=`wget -qO- ifconfig.co/ip`
-
 echo "Seu ip é $ipvps"
-echo
+read ipvps
 echo "Qual sua Genkey ?"
 read genkey
 echo
