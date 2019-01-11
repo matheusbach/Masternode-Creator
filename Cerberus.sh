@@ -14,6 +14,7 @@ echo "Instalando Node..."
 sleep 3
 wget https://github.com/cerberuscore/cerberus/releases/download/0.12.1.3/cerberus_120103_linux.tar.gz
 tar -xzvf cerberus_120103_linux.tar.gz
+mv ~/cerberus_120103_linux.tar.gz ~/cerberus_120103_linux/cerberus_120103_linux.tar.gz
 cd cerberus_120103_linux
 ./cerberusd &
 sleep 40
@@ -262,3 +263,4 @@ echo "./cerberus-cli mnsync status"
 echo "Faça isso de tempos em tempos até que note que ja está em true para iniciar o masternode na wallet em seu computador"
 echo "AGRADECIMENTOS A DIEGO NEVES DO SITE https://staking.world/Pages/index.aspx E A MATHEUS BACH, SEM ELES NAO SERIA POSSIVEL ESTE SCRYPT."
 echo "Att. Vinicius Ferreiro - Canal Bitnoob
+mv ~/Cerberus.sh ~/cerberus_120103_linux
