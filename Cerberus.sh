@@ -261,6 +261,6 @@ echo "cd"
 echo "cd cerberus_120103_linux"
 echo "./cerberus-cli mnsync status"
 echo "Faça isso de tempos em tempos até que note que ja está em true para iniciar o masternode na wallet em seu computador"
-echo "AGRADECIMENTOS A DIEGO NEVES DO SITE https://staking.world/Pages/index.aspx E A MATHEUS BACH, SEM ELES NAO SERIA POSSIVEL ESTE SCRYPT."
+echo "AGRADECIMENTOS A DIEGO NEVES DO SITE https://staking.world E A MATHEUS BACH, SEM ELES NAO SERIA POSSIVEL ESTE SCRYPT."
 echo "Att. Vinicius Ferreiro - Canal Bitnoob"
 mv ~/Cerberus.sh ~/cerberus_120103_linux
