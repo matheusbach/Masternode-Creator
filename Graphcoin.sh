@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 cd
 echo "BEM VINDO AOS SCRYPTS DO CANAL BITNOOB!!!"
 sleep 3 
@@ -78,4 +77,4 @@ echo "./graphcoin-cli mnsync status"
 echo "Faça isso de tempos em tempos até que note que ja está em true para iniciar o masternode na wallet em seu computador"
 echo "AGRADECIMENTOS A DIEGO NEVES DO SITE https://staking.world E A MATHEUS BACH, SEM ELES NAO SERIA POSSIVEL ESTE SCRYPT."
 echo "Att. Vinicius Ferreiro - Canal Bitnoob"
-mv ~/Cerberus.sh ~/graph
+mv ~/Graphcoin.sh ~/graph
