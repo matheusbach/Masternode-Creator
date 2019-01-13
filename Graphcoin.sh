@@ -10,7 +10,7 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
 sudo apt-get install git
 
-echo "Instalandi Dependencias..."
+echo "Instalando Dependencias..."
 sleep 3
 apt install -y make build-essential libtool software-properties-common autoconf libssl-dev libboost-dev libboost-chrono-dev libboost-filesystem-dev \
 libboost-program-options-dev libboost-system-dev libboost-test-dev libboost-thread-dev sudo automake git curl libdb4.8-dev \
@@ -22,7 +22,7 @@ cd
 mkdir graph
 cd graph
 wget https://github.com/Graphcoin/downloads/raw/master/Linux_x64/graphcoind
-wget https://github.com/Graphcoin/downloads/raw/master/Linux_x64/graphcoin-qt
+wget https://github.com/Graphcoin/downloads/raw/master/Linux_x64/graphcoin-cli
 chmod +rwx graphcoin-cli
 chmod +rwx graphcoind
 ./graphcoind &
