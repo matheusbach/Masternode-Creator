@@ -25,27 +25,23 @@ echo "Seu ip é $ipvps"
 read ipvps
 echo "Qual sua Genkey ?"
 read genkey
-echo "Escreva um nome de usuario !"
-read user
-echo "Escreva uma senha !"
+echo "Escreva uma senha com 40 caracteres!"
 read senha
 echo
 
-echo "addnode=[2a02:c207:2022:332::18]:10417" >> ~/.liberty/liberty.conf
-echo "addnode=68.183.210.92:10417" >> ~/.liberty/liberty.conf
-echo "addnode=[2a02:c207:2022:8299::d]:10417" >> ~/.liberty/liberty.conf
-echo "addnode=178.128.37.250:10417" >> ~/.liberty/liberty.conf
-echo "addnode=45.77.44.175:10417" >> ~/.liberty/liberty.conf
-echo "addnode=128.199.65.17:10417" >> ~/.liberty/liberty.conf
-echo "rpcuser="$user >> ~/.liberty/liberty.conf
+echo "rpcuser=Libertyrpc" >> ~/.liberty/liberty.conf
 echo "rpcpassword="$senha >> ~/.liberty/liberty.conf
+echo "rpcport=10416" >> ~/.liberty/liberty.conf
 echo "rpcallowip=127.0.0.1" >> ~/.liberty/liberty.conf
+echo "rpcconnect=127.0.0.1" >> ~/.liberty/liberty.conf
+echo "rpcbind=127.0.0.1" >> ~/.liberty/liberty.conf
+echo "maxconnections=512" >> ~/.liberty/liberty.conf
 echo "listen=1" >> ~/.liberty/liberty.conf
 echo "daemon=1" >> ~/.liberty/liberty.conf
-echo "server=1" >> ~/.liberty/liberty.conf
 echo "masternode=1" >> ~/.liberty/liberty.conf
-echo "externalip="$ipvps >> ~/.liberty/liberty.conf
-echo "masternodeprivkey="$genkey >> ~/.liberty/liberty.conf
+echo "masternodeaddr="$ipvps >> ~/.liberty/liberty.conf
+echo "bind="$ipvps >> ~/.liberty/liberty.conf
+echo "masternodeprivkey="genkey >> ~/.liberty/liberty.conf
 
 echo "Iniciando Masternode..."
 sleep 3
