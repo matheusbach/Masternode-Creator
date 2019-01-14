@@ -16,7 +16,6 @@ sleep 3
 wget https://github.com/ctscoin/ctsc-core/releases/download/v1.1.0/CTSC-v1.1.0-linux-x86_64.tar.gz
 tar -xzvf CTSC-v1.1.0-linux-x86_64.tar.gz
 cd
-cd telos
 mv ~/CTSC-v1.1.0-linux-x86_64 ~/ctsc
 mv ~/CTSC-v1.1.0-linux-x86_64.tar.gz ~/ctsc
 cd ctsc
