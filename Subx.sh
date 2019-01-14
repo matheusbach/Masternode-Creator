@@ -26,10 +26,10 @@ echo "Seu ip é $ipvps"
 read ipvps
 echo "Qual sua Genkey ?"
 read genkey
-echo "Escreva uma senha com 40 caracteres!"
-read senha
 echo
 
+echo "rpcuser=subxrpc" >> ~/.subxmn/subx.conf
+echo "rpcpassword=EbcFN7WtJ9EhQcdYRaNn91YAdggd1i65woo3tvJViHaW" >> ~/.subxmn/subx.conf
 echo "externalip="$ipvps >> ~/.subxmn/subx.conf
 echo "masternode=1" >> ~/.subxmn/subx.conf
 echo "masternodeprivkey="$genkey >> ~/.subxmn/subx.conf
