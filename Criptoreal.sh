@@ -33,7 +33,7 @@ echo "server=1" >> ~/.criptoreal/criptoreal.conf
 echo "logtimestamps=1" >> ~/.criptoreal/criptoreal.conf
 echo "maxconnections=256" >> ~/.criptoreal/criptoreal.conf
 echo "port=5511" >> ~/.criptoreal/criptoreal.conf
-echo "masternode=1" ~/.criptoreal/criptoreal.conf
+echo "masternode=1" >> ~/.criptoreal/criptoreal.conf
 echo "externalip="$ipvps >> ~/.criptoreal/criptoreal.conf
 echo "masternodeprivkey="$genkey >> ~/.criptoreal/criptoreal.conf
 
