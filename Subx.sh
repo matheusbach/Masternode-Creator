@@ -19,7 +19,7 @@ wget https://github.com/EXISTDevv/SUBXMN/releases/download/v1.0.1.1/subxd-daemon
 unzip subxd-daemon-linux-v1.0.1.1.zip
 chmod +rwx subxd
 ./subxd &
-aleep 3
+sleep 3
 ./subxd &
 sleep 20
 ./subxd stop
