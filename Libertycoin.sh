@@ -23,7 +23,7 @@ sleep 2
 sleep 20
 ./liberty-cli stop
 
-echo "Seu ip é $ipvps"
+echo "Qual o IP da sua VPS ?"
 read ipvps
 echo "Qual sua Genkey ?"
 read genkey
