@@ -18,7 +18,7 @@ cd liberty
 wget https://s3.amazonaws.com/liberty-builds/5.1.1.0/linux-x64.tar.gz
 tar -xzvf linux-x64.tar.gz
 ./libertyd
-sleep 40
+sleep 20
 ./liberty-cli stop
 
 echo "Seu ip é $ipvps"
