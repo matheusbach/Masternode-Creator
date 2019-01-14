@@ -22,14 +22,12 @@ chmod +rwx subxd
 sleep 20
 ./subxd stop
 
-echo "Seu ip é $ipvps"
+echo "Qual o IP da sua VPS ?"
 read ipvps
 echo "Qual sua Genkey ?"
 read genkey
 echo
 
-echo "rpcuser=subxrpc" >> ~/.subxmn/subx.conf
-echo "rpcpassword=EbcFN7WtJ9EhQcdYRaNn91YAdggd1i65woo3tvJViHaW" >> ~/.subxmn/subx.conf
 echo "externalip="$ipvps >> ~/.subxmn/subx.conf
 echo "masternode=1" >> ~/.subxmn/subx.conf
 echo "masternodeprivkey="$genkey >> ~/.subxmn/subx.conf
