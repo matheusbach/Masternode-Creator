@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 cd
 echo "BEM VINDO AOS SCRYPTS DO CANAL BITNOOB!!!"
 sleep 3 
@@ -52,8 +51,8 @@ sleep 30
 echo "Se os parametros foram true e a transação na wallet do seu computador ja estiver confirmada, pode iniciar o Masternode"
 echo "Caso não for true, aguarde mais alguns minutos e use os comandos"
 echo "cd"
-echo "cd graph"
-echo "./graphcoin-cli mnsync status"
+echo "cd edcash-2.1.1-linux"
+echo "./edcash-cli mnsync status"
 echo "Faça isso de tempos em tempos até que note que ja está em true para iniciar o masternode na wallet em seu computador"
 echo "AGRADECIMENTOS A DIEGO NEVES DO SITE https://staking.world E A MATHEUS BACH, SEM ELES NAO SERIA POSSIVEL ESTE SCRYPT."
 echo "Att. Vinicius Ferreiro - Canal Bitnoob"
