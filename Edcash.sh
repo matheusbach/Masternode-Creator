@@ -45,8 +45,10 @@ echo "Iniciando Masternode..."
 sleep 3
 cd 
 cd edcash-2.1.1-linux
-./edcashd
-sleep 30
+./edcashd &
+aleep 5
+./edcashd &
+sleep 10
 ./edcash-cli mnsync status
 echo "Se os parametros foram true e a transação na wallet do seu computador ja estiver confirmada, pode iniciar o Masternode"
 echo "Caso não for true, aguarde mais alguns minutos e use os comandos"
