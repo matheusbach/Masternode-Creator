@@ -38,7 +38,6 @@ echo "addnode=201.148.120.30" >> ~/.edcash/edcash.conf
 echo "addnode=144.217.188.81" >> ~/.edcash/edcash.conf
 echo "masternode=1" >> ~/.edcash/edcash.conf
 echo "masternodeaddr="$ipvps >> ~/.edcash/edcash.conf
-echo "externalip="$ipvps >> ~/.edcash/edcash.conf
 echo "masternodeprivkey="$genkey >> ~/.edcash/edcash.conf
 
 echo "Iniciando Masternode..."
