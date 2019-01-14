@@ -30,7 +30,7 @@ echo "Escreva uma senha com 40 caracteres!"
 read senha
 echo
 
-echo "externalip="$ipvps >> ~/.GraphcoinCore/graphcoin.conf
+echo "externalip="$ipvps >> ~/.subxmn/subx.conf
 echo "masternode=1" >> ~/.subxmn/subx.conf
 echo "masternodeprivkey="$genkey >> ~/.subxmn/subx.conf
 
