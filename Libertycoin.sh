@@ -49,7 +49,7 @@ echo "Iniciando Masternode..."
 sleep 3
 cd 
 cd liberty
-./libertyd
+./libertyd &
 sleep 30
 ./liberty-cli mnsync status
 echo "Se os parametros foram true e a transação na wallet do seu computador ja estiver confirmada, pode iniciar o Masternode"
