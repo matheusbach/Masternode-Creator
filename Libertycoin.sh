@@ -19,7 +19,7 @@ wget https://s3.amazonaws.com/liberty-builds/5.1.1.0/linux-x64.tar.gz
 sleep 2
 tar -xzvf linux-x64.tar.gz
 sleep 2
-./libertyd
+./libertyd &
 sleep 20
 ./liberty-cli stop
 
