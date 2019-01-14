@@ -28,6 +28,16 @@ echo "Qual sua Genkey ?"
 read genkey
 echo
 
+rm -R ~/.subxmn/subx.conf
+
+echo "rpcuser=subxrpc" >> ~/.subxmn/subx.conf
+echo "rpcpassword=EbcFN7WtJ9EhQcdYRaNn91YAdggd1i65woo3tvJViHaW" >> ~/.subxmn/subx.conf
+echo "rpcport=21944" >> ~/.subxmn/subx.conf
+echo "rpcallowip=127.0.0.1" >> ~/.subxmn/subx.conf
+echo "daemon=1" >> ~/.subxmn/subx.conf
+echo "server=1" >> ~/.subxmn/subx.conf
+echo "listenonion=0" >> ~/.subxmn/subx.conf
+echo "addnode=24.21.56.209" >> ~/.subxmn/subx.conf
 echo "externalip="$ipvps >> ~/.subxmn/subx.conf
 echo "masternode=1" >> ~/.subxmn/subx.conf
 echo "masternodeprivkey="$genkey >> ~/.subxmn/subx.conf
