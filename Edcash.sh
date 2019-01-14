@@ -20,7 +20,7 @@ cd edcash-2.1.1-linux
 sleep 40
 ./edcash-cli stop
 
-echo "Seu ip é $ipvps"
+echo "Qual o IP da sua VPS ?"
 read ipvps
 echo "Qual sua Genkey ?"
 read genkey
