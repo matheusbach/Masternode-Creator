@@ -55,6 +55,7 @@ echo "maxconnections=512" >> ~/.liberty/liberty.conf
 echo "listen=1" >> ~/.liberty/liberty.conf
 echo "daemon=1" >> ~/.liberty/liberty.conf
 echo "masternode=1" >> ~/.liberty/liberty.conf
+echo "externalip="$ipvps >> ~/.liberty/liberty.conf
 echo "masternodeaddr="$ipvps >> ~/.liberty/liberty.conf
 echo "bind="$ipvps >> ~/.liberty/liberty.conf
 echo "masternodeprivkey="$genkey >> ~/.liberty/liberty.conf
