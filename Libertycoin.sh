@@ -4,6 +4,14 @@ echo "BEM VINDO AOS SCRYPTS DO CANAL BITNOOB!!!"
 sleep 3 
 echo "Será iniciado a Instalação/Montagem do Masternode de Liberty Coin v1.0"
 sleep 3
+echo "Limpando arquivos de instalações anteriores..."
+sleep 3
+cd 
+cd liberty
+./liberty-cli stop
+cd
+rm -R liberty
+rm -R .liberty
 echo "Instalando Pré-Requisitos..."
 sleep 3 
 sudo apt-get update && sudo apt-get upgrade
