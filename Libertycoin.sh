@@ -12,6 +12,7 @@ cd liberty
 cd
 rm -R liberty
 rm -R .liberty
+rm -R linux-x64.tar.gz
 echo "Instalando Pré-Requisitos..."
 sleep 3 
 sudo apt-get update && sudo apt-get upgrade
