@@ -10,7 +10,17 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
 sudo apt-get install git
 
+echo "Limpando arquivos de instalações anteriores..."
+sleep 3
+cd 
+cd telos
+./transcendence-cli stop
+cd
+rm -R telos
+rm -R .transcendence
+rm -R Linux.zip
 echo
+
 echo "Instalando Node..."
 sleep 3
 wget https://github.com/phoenixkonsole/transcendence/releases/download/v1.1.0.0/Linux.zip
