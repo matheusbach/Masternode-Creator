@@ -49,6 +49,13 @@ echo "maxconnections=256" >> ~/.fox/fox.conf
 echo "masternode=1" >> ~/.fox/fox.conf
 echo "masternodeprivkey="$genkey >> ~/.fox/fox.conf
 echo "port=40428" >> ~/.fox/fox.conf
+echo "addnode=37.139.106.196" >> ~/.fox/fox.conf
+echo "addnode=206.189.100.225" >> ~/.fox/fox.conf
+echo "addnode=159.65.139.141" >> ~/.fox/fox.conf
+echo "addnode=167.99.137.128" >> ~/.fox/fox.conf
+echo "addnode=178.128.32.73" >> ~/.fox/fox.conf
+echo "addnode=192.241.194.150" >> ~/.fox/fox.conf
+echo "addnode=165.227.116.240" >> ~/.fox/fox.conf
 
 echo "Iniciando Masternode..."
 sleep 3
