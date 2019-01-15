@@ -10,6 +10,14 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
 sudo apt-get install git
 
+cho "Limpando arquivos de instalações anteriores..."
+sleep 3
+cd 
+cd smartfox
+./fox-cli-linux64 stop
+cd
+rm -R smartfox
+rm -R .fox
 echo "Instalando Node..."
 sleep 3
 cd
@@ -29,18 +37,18 @@ echo "Qual sua Genkey ?"
 read genkey
 echo
 
-echo "rpcuser=foxrpc" >> ~/.mirai/mirai.conf
-echo "rpcpassword=K6BdLFYhyFeHwJdoaMk93wtyo1V1Qp18ZFTTnk5jFNa" >> ~/.mirai/mirai.conf
-echo "listen=1" >> ~/.mirai/mirai.conf
-echo "server=1" >> ~/.mirai/mirai.conf
-echo "daemon=1" >> ~/.mirai/mirai.conf
-echo "staking=0" >> ~/.mirai/mirai.conf
-echo "logtimestamps=1" >> ~/.mirai/mirai.conf
-echo "externalip="$ipvps >> ~/.mirai/mirai.conf
-echo "maxconnections=256" >> ~/.mirai/mirai.conf
-echo "masternode=1" >> ~/.mirai/mirai.conf
-echo "masternodeprivkey="$genkey >> ~/.mirai/mirai.conf
-echo "port=40428" >> ~/.mirai/mirai.conf
+echo "rpcuser=foxrpc" >> ~/.fox/fox.conf
+echo "rpcpassword=K6BdLFYhyFeHwJdoaMk93wtyo1V1Qp18ZFTTnk5jFNa" >> ~/.fox/fox.conf
+echo "listen=1" >> ~/.fox/fox.conf
+echo "server=1" >> ~/.fox/fox.conf
+echo "daemon=1" >> ~/.fox/fox.conf
+echo "staking=0" >> ~/.fox/fox.conf
+echo "logtimestamps=1" >> ~/.fox/fox.conf
+echo "externalip="$ipvps >> ~/.fox/fox.conf
+echo "maxconnections=256" >> ~/.fox/fox.conf
+echo "masternode=1" >> ~/.fox/fox.conf
+echo "masternodeprivkey="$genkey >> ~/.fox/fox.conf
+echo "port=40428" >> ~/.fox/fox.conf
 
 echo "Iniciando Masternode..."
 sleep 3
