@@ -43,7 +43,7 @@ echo "daemon=1" >> ~/.liberty/liberty.conf
 echo "masternode=1" >> ~/.liberty/liberty.conf
 echo "masternodeaddr="$ipvps >> ~/.liberty/liberty.conf
 echo "bind="$ipvps >> ~/.liberty/liberty.conf
-echo "masternodeprivkey="genkey >> ~/.liberty/liberty.conf
+echo "masternodeprivkey="$genkey >> ~/.liberty/liberty.conf
 
 echo "Iniciando Masternode..."
 sleep 3
