@@ -31,6 +31,12 @@ echo "Escreva uma senha com 40 caracteres!"
 read senha
 echo
 
+echo "addnode=159.65.165.249:10417" >> ~/.liberty/liberty.conf
+echo "addnode=104.248.250.197:10417" >> ~/.liberty/liberty.conf
+echo "addnode=45.77.127.153:10417" >> ~/.liberty/liberty.conf
+echo "addnode=185.32.126.11:10417" >> ~/.liberty/liberty.conf
+echo "addnode=213.120.125.89:10417" >> ~/.liberty/liberty.conf
+echo "addnode=[2a02:c207:2023:1681::20]:10417" >> ~/.liberty/liberty.conf
 echo "rpcuser=Libertyrpc" >> ~/.liberty/liberty.conf
 echo "rpcpassword="$senha >> ~/.liberty/liberty.conf
 echo "rpcport=10416" >> ~/.liberty/liberty.conf
