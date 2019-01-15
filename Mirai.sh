@@ -2,7 +2,7 @@
 cd
 echo "BEM VINDO AOS SCRYPTS DO CANAL BITNOOB!!!"
 sleep 3 
-echo "Será iniciado a Instalação/Montagem do Masternode de Cerberus v1.0"
+echo "Será iniciado a Instalação/Montagem do Masternode de Mirai v1.0"
 sleep 3
 echo "Instalando Pré-Requisitos..."
 sleep 3 
