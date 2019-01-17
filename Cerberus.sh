@@ -10,6 +10,16 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
 sudo apt-get install git
 
+echo "Limpando arquivos de instalações anteriores..."
+sleep 3
+cd 
+cd cerberus_120103_linux
+./cerberus-cli stop
+cd
+rm -R cerberus_120103_linux
+rm -R .cerberuscore
+rm -R cerberus_120103_linux.tar.gz
+
 echo "Instalando Node..."
 sleep 3
 wget https://github.com/cerberuscore/cerberus/releases/download/0.12.1.3/cerberus_120103_linux.tar.gz
