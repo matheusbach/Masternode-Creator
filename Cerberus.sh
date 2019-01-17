@@ -32,6 +32,7 @@ sleep 40
 
 ipvps=$(curl -s4 icanhazip.com)
 
+
 echo "Seu ip é:"
 echo $ipvps
 echo "Qual sua Genkey ?"
