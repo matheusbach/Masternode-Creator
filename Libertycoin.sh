@@ -32,8 +32,11 @@ sleep 2
 sleep 20
 ./liberty-cli stop
 
-echo "Qual o IP da sua VPS ?"
-read ipvps
+ipvps=$(curl -s4 icanhazip.com)
+
+
+echo "Seu ip é:"
+echo $ipvps
 echo "Qual sua Genkey ?"
 read genkey
 echo "Escreva uma senha com 40 caracteres!"
