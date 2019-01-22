@@ -10,6 +10,16 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
 sudo apt-get install git
 
+echo "Limpando arquivos de instalações anteriores..."
+sleep 3
+cd 
+cd subx
+./subxd stop
+cd
+rm -R subx
+rm -R subxd-daemon-linux-v1.0.1.1.zip
+rm -R .subxmn
+
 echo "Instalando Node..."
 sleep 3
 cd
@@ -24,8 +34,10 @@ sleep 3
 sleep 20
 ./subxd stop
 
-echo "Qual o IP da sua VPS ?"
-read ipvps
+ipvps=$(curl -s4 icanhazip.com)
+
+echo "Seu ip é:"
+echo $ipvps
 echo "Qual sua Genkey ?"
 read genkey
 echo
