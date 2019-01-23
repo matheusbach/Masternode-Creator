@@ -42,6 +42,9 @@ echo "Qual sua Genkey ?"
 read genkey
 echo
 
+echo " " >> ~/.subxmn/subx.conf
+echo "port=21953" >> ~/.subxmn/subx.conf
+echo "addnode=144.202.18.54" >> ~/.subxmn/subx.conf
 echo "externalip="$ipvps >> ~/.subxmn/subx.conf
 echo "masternode=1" >> ~/.subxmn/subx.conf
 echo "masternodeprivkey="$genkey >> ~/.subxmn/subx.conf
