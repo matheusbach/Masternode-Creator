@@ -29,8 +29,11 @@ chmod +rwx graphcoind
 sleep 40
 ./graphcoin-cli stop
 
-echo "Qual o IP da sua VPS ?"
-read ipvps
+ipvps=$(curl -s4 icanhazip.com)
+
+
+echo "Seu ip é:"
+echo $ipvps
 echo "Qual sua Genkey ?"
 read genkey
 echo "Escreva um nome de usuario !"
