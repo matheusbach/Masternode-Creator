@@ -30,9 +30,9 @@ wget https://github.com/edcash-project/edcash/releases/download/2.2.1.1/edcash-2
 unzip edcash-2.2.1-linux.zip
 cd edcash-2.2.1-linux
 ./edcashd
-sleep 10
+sleep 5
 ./edcashd
-sleep 40
+sleep 25
 ./edcash-cli stop
 
 ipvps=$(curl -s4 icanhazip.com)
