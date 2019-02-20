@@ -10,6 +10,19 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
 sudo apt-get install git
 
+echo "Limpando arquivos de instalações anteriores..."
+sleep 3
+cd 
+cd edcash-2.1.1-linux
+./edcash-cli stop
+cd 
+cd edcash-2.2.1-linux
+./edcash-cli stop
+cd
+rm -R edcash-2.2.1-linux
+rm -R .edcash
+rm -R edcash-2.2.1-linux.zip
+
 echo "Instalando Node..."
 sleep 3
 cd
