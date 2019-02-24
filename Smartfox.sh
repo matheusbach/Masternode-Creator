@@ -31,8 +31,10 @@ chmod +rwx foxd-linux-64
 sleep 30
 ./fox-cli-linux64 stop
 
-echo "Qual o IP da sua VPS ?"
-read ipvps
+ipvps=$(curl -s4 icanhazip.com)
+
+echo "Seu ip é:"
+echo $ipvps
 echo "Qual sua Genkey ?"
 read genkey
 echo
