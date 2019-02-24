@@ -25,7 +25,7 @@ sleep 3
 cd
 mkdir imagecoin
 cd imagecoin
-wget 
+wget https://cdn-03.anonfiles.com/z0n7Y9q9ba/4e47cdf9-1547852544/ImageCoin.zip
 unzip ImageCoin.zip
 ./ImageCoind &
 sleep 40
