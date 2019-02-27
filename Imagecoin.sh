@@ -28,7 +28,7 @@ mkdir imagecoin
 cd imagecoin
 #wget https://cdn-03.anonfiles.com/z0n7Y9q9ba/4e47cdf9-1547852544/ImageCoin.zip
 unzip ImageCoin.zip
-chmod +rwx ImageCoin
+chmod +rwx ImageCoind
 chmod +rwx ImageCoin-cli
 ./ImageCoind &
 sleep 40
@@ -65,6 +65,23 @@ echo "addnode=178.46.153.242:6998" >> ~/.imagecoincore/imagecoin.conf
 echo "addnode=[2404:9400:10fc:a013::5]:6998" >> ~/.imagecoincore/imagecoin.conf
 echo "addnode=[2001:0:9d38:78cf:2cbe:c268:373d:48ef]:6998" >> ~/.imagecoincore/imagecoin.conf
 echo "addnode=[2002:96a5:c1e1::96a5:c1e1]:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=23.101.61.34" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=79.135.200.25:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=178.46.153.242:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=[2404:9400:10fc:a013::5]:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=[2001:0:9d38:78cf:2cbe:c268:373d:48ef]:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=[2002:96a5:c1e1::96a5:c1e1]:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=[2a03:4000:1a:699::1]:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=[2404:9400:10fc:a013::1e]:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=138.197.98.227:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=[2408:832e:2080:250:90d7:8a11:349b:25de]:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=[2002:4f87:c81c::4f87:c81c]:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=[2001:0:9d38:6abd:2894:9825:4517:5408]:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=[2002:96a5:c129::96a5:c129]:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=[2002:96a5:c1e1::96a5:c1e1]:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=[2001:0:9d38:6abd:24ed:3744:888f:6ee]:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=[2804:7f5:938a:df86:84aa:516f:cce5:a2f3]:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=5.189.162.110:6998" >> ~/.imagecoincore/imagecoin.conf
 
 echo "Iniciando Masternode..."
 sleep 3
