@@ -11,22 +11,22 @@ sudo apt-get install unzip nano -y
 apt-get install unzip
 sudo apt-get install git
 
-echo "Limpando arquivos de instalações anteriores..."
-sleep 3
-cd 
-cd imagecoin
-./ImageCoin-cli stop
-cd
-rm -R imagecoin
-rm -R .imagecoincore
-rm -R ImageCoin.zip
+#echo "Limpando arquivos de instalações anteriores..."
+#sleep 3
+#cd 
+#cd imagecoin
+#./ImageCoin-cli stop
+#cd
+#rm -R imagecoin
+#rm -R .imagecoincore
+#rm -R ImageCoin.zip
 
 echo "Instalando Node..."
 sleep 3
 cd
 mkdir imagecoin
 cd imagecoin
-wget https://cdn-03.anonfiles.com/z0n7Y9q9ba/4e47cdf9-1547852544/ImageCoin.zip
+#wget https://cdn-03.anonfiles.com/z0n7Y9q9ba/4e47cdf9-1547852544/ImageCoin.zip
 unzip ImageCoin.zip
 ./ImageCoind &
 sleep 40
