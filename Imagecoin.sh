@@ -8,6 +8,7 @@ echo "Instalando Pré-Requisitos..."
 sleep 3 
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
+apt-get install unzip
 sudo apt-get install git
 
 echo "Limpando arquivos de instalações anteriores..."
