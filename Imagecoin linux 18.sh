@@ -8,7 +8,6 @@ echo "Instalando Pré-Requisitos..."
 sleep 3 
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
-apt-get install unzip
 sudo apt-get install git
 
 echo "Limpando arquivos de instalações anteriores..."
@@ -19,15 +18,15 @@ cd imagecoin
 cd
 rm -R imagecoin
 rm -R .imagecoincore
-#rm -R ImageCoin.zip
+rm -R ImageCoin.zip
 
 echo "Instalando Node..."
 sleep 3
 cd
 mkdir imagecoin
 cd imagecoin
-#wget https://cdn-03.anonfiles.com/z0n7Y9q9ba/4e47cdf9-1547852544/ImageCoin.zip
-unzip ImageCoin.zip
+wget https://github.com/mceme/ImageCoin/releases/download/1.0.16/ImageCoin_linux18_86_64.tar.xz
+tar -xvf ImageCoin_linux18_86_64.tar.xz
 chmod +rwx ImageCoind
 chmod +rwx ImageCoin-cli
 ./ImageCoind &
