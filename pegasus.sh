@@ -9,7 +9,7 @@ sleep 3
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
 sudo apt-get install git
-sudo apt-get install unrar
+sudo apt install rar
 
 
 echo "Limpando arquivos de instalações anteriores..."
