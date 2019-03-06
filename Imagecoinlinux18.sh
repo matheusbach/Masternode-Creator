@@ -25,8 +25,8 @@ sleep 3
 cd
 mkdir imagecoin
 cd imagecoin
-wget https://github.com/mceme/ImageCoin/releases/download/1.0.16/ImageCoin_linux18_86_64.tar.xz
-tar -xvf ImageCoin_linux18_86_64.tar.xz
+wget https://github.com/mceme/ImageCoin/releases/download/1.0.19/ImageCoin_linux18x86_64.tar.xz
+tar -xvf ImageCoin_linux18x86_64.tar.xz
 chmod +rwx ImageCoind
 chmod +rwx ImageCoin-cli
 ./ImageCoind &
