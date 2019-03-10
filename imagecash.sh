@@ -2,23 +2,22 @@
 cd
 echo "BEM VINDO AOS SCRYPTS DO CANAL BITNOOB!!!"
 sleep 3 
-echo "Ser· iniciado a InstalaÁ„o/Montagem do Masternode de Imagecash v1.0 para linux 18.04"
+echo "Ser√° iniciado a Instala√ß√£o/Montagem do Masternode de Imagecash v1.0 para linux 18.04"
 sleep 3
-echo "Instalando PrÈ-Requisitos..."
+echo "Instalando Pr√©-Requisitos..."
 sleep 3 
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
 sudo apt-get install git
 
-echo "Limpando arquivos de instalaÁıes anteriores..."
+echo "Limpando arquivos de instala√ß√µes anteriores..."
 sleep 3
 cd 
-cd imagecoin
-./ImageCoin-cli stop
+cd imagecash
+./imgcash-cli stop
 cd
-rm -R imagecoin
-rm -R .imagecoincore
-rm -R ImageCoin.zip
+rm -R imagecash
+rm -R .imgcashcore
 
 echo "Instalando Node..."
 sleep 3
@@ -35,7 +34,7 @@ sleep 40
 
 ipvps=$(curl -s4 icanhazip.com)
 
-echo "Seu ip È:"
+echo "Seu ip √©:"
 echo $ipvps
 echo "Qual sua Genkey ?"
 read genkey
@@ -72,12 +71,12 @@ cd imagecash
 ./imgcashd &
 sleep 30
 ./imgcash-cli mnsync status
-echo "Se os parametros foram true e a transaÁ„o na wallet do seu computador ja estiver confirmada, pode iniciar o Masternode"
-echo "Caso n„o for true, aguarde mais alguns minutos e use os comandos"
+echo "Se os parametros foram true e a transa√ß√£o na wallet do seu computador ja estiver confirmada, pode iniciar o Masternode"
+echo "Caso n√£o for true, aguarde mais alguns minutos e use os comandos"
 echo "cd"
 echo "cd imagecash"
 echo "./imgcash-cli mnsync status"
-echo "FaÁa isso de tempos em tempos atÈ que note que ja est· em true para iniciar o masternode na wallet em seu computador"
+echo "Fa√ßa isso de tempos em tempos at√© que note que ja est√° em true para iniciar o masternode na wallet em seu computador"
 echo "AGRADECIMENTOS A DIEGO NEVES DO SITE https://staking.world E A MATHEUS BACH, SEM ELES NAO SERIA POSSIVEL ESTE SCRYPT."
 echo "Att. Vinicius Ferreiro - Canal Bitnoob"
 mv ~/imagecash.sh ~/imagecash
