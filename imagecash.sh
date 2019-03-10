@@ -12,7 +12,7 @@ sudo apt-get install git
 
 echo "Limpando arquivos de instalações anteriores..."
 sleep 3
-cd 
+cd
 cd imagecash
 ./imgcash-cli stop
 cd
