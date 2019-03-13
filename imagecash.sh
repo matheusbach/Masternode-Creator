@@ -24,8 +24,8 @@ sleep 3
 cd
 mkdir imagecash
 cd imagecash
-wget https://github.com/mceme/ImageCash/releases/download/1.0.8/imgcash-linux_18.04_x86_64.tar.xz
-tar -xvf imgcash-linux_18.04_x86_64.tar.xz
+wget https://github.com/mceme/ImageCash/releases/download/1.10/imgcash-linux86x64.tar.xz
+tar -xvf imgcash-linux86x64.tar.xz
 chmod +rwx imgcashd
 chmod +rwx imgcash-cli
 ./imgcashd &
@@ -57,12 +57,12 @@ echo "masternode=1" >> ~/.imgcashcore/imgcash.conf
 echo "externalip="$ipvps >> ~/.imgcashcore/imgcash.conf
 echo "masternodeprivkey="$genkey >> ~/.imgcashcore/imgcash.conf
 echo "rcpport=6888" >> ~/.imgcashcore/imgcash.conf
-echo "addnode=139.180.219.195:6888" >> ~/.imgcashcore/imgcash.conf
-echo "addnode=75.144.195.68:6888" >> ~/.imgcashcore/imgcash.conf
 echo "addnode=23.101.61.34:6888" >> ~/.imgcashcore/imgcash.conf
-echo "addnode=18.216.217.124" >> ~/.imgcashcore/imgcash.conf
-echo "addnode=139.180.204.127:6888" >> ~/.imgcashcore/imgcash.conf
-echo "addnode=45.32.135.211:6888" >> ~/.imgcashcore/imgcash.conf
+echo "addnode=104.238.171.10:6888" >> ~/.imgcashcore/imgcash.conf
+echo "addnode=45.76.47.138:6888" >> ~/.imgcashcore/imgcash.conf
+echo "addnode=51.75.47.131:6888" >> ~/.imgcashcore/imgcash.conf
+
+
 
 echo "Iniciando Masternode..."
 sleep 3
