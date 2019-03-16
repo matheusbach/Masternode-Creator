@@ -29,6 +29,8 @@ wget https://github.com/edcash-project/edcash/releases/download/2.2.1.1/daemon-l
 tar -xzvf daemon-linux-2.2.1.tar.gz
 cd daemon-linux-2.2.1 
 ./edcashd
+sleep 5
+./edcashd
 sleep 25
 ./edcash-cli stop
 
@@ -62,13 +64,15 @@ echo "Iniciando Masternode..."
 sleep 3
 cd 
 cd daemon-linux-2.2.1
+./edcashd
+sleep 5
 ./edcashd &
 sleep 10
 ./edcash-cli mnsync status
 echo "Se os parametros foram true e a transação na wallet do seu computador ja estiver confirmada, pode iniciar o Masternode"
 echo "Caso não for true, aguarde mais alguns minutos e use os comandos"
 echo "cd"
-echo "cd edcash-2.2.1-linux"
+echo "cd daemon-linux-2.2.1"
 echo "./edcash-cli mnsync status"
 echo "Faça isso de tempos em tempos até que note que ja está em true para iniciar o masternode na wallet em seu computador"
 echo "AGRADECIMENTOS A DIEGO NEVES DO SITE https://staking.world E A MATHEUS BACH, SEM ELES NAO SERIA POSSIVEL ESTE SCRYPT."
