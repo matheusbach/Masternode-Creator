@@ -9,28 +9,25 @@ sleep 3
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
 sudo apt-get install git
+sudo apt-get install libboost-all-dev libevent-dev software-properties-common -y
+sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo apt-get update
+sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
+sudo apt-get install libpthread-stubs0-dev -y
+sudo apt-get install libzmq3-dev -y
+sudo apt install -y make build-essential libtool software-properties-common autoconf libssl-dev libboost-dev libboost-chrono-dev libboost-filesystem-dev \
+libboost-program-options-dev libboost-system-dev libboost-test-dev libboost-thread-dev sudo automake git curl libdb4.8-dev \
+bsdmainutils libdb4.8++-dev libminiupnpc-dev libgmp3-dev ufw pkg-config libevent-dev libdb5.3++ unzip libzmq5
 
 echo "Limpando arquivos de instalações anteriores..."
-sleep 3
-cd 
-cd edcash-2.1.1-linux
-./edcash-cli stop
-cd 
-cd edcash-2.2.1-linux
-./edcash-cli stop
-cd
-rm -R edcash-2.2.1-linux
-rm -R .edcash
-rm -R edcash-2.2.1-linux.zip
+
 
 echo "Instalando Node..."
 sleep 3
 cd
-wget https://github.com/edcash-project/edcash/releases/download/2.2.1.1/edcash-2.2.1-linux.zip
-unzip edcash-2.2.1-linux.zip
-cd edcash-2.2.1-linux
-./edcashd
-sleep 5
+wget https://github.com/edcash-project/edcash/releases/download/2.2.1.1/daemon-linux-2.2.1.tar.gz
+tar -xzvf daemon-linux-2.2.1.tar.gz
+cd daemon-linux-2.2.1 
 ./edcashd
 sleep 25
 ./edcash-cli stop
@@ -64,9 +61,7 @@ echo "masternodeprivkey="$genkey >> ~/.edcash/edcash.conf
 echo "Iniciando Masternode..."
 sleep 3
 cd 
-cd edcash-2.2.1-linux
-./edcashd &
-aleep 5
+cd daemon-linux-2.2.1
 ./edcashd &
 sleep 10
 ./edcash-cli mnsync status
