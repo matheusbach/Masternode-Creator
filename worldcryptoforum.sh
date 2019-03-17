@@ -67,7 +67,7 @@ echo "cd pegasuscoin"
 echo "./pegasus-cli mnsync status"
 echo "Faça isso de tempos em tempos até que note que ja está em true para iniciar o masternode na wallet em seu computador"
 echo "Deverá usar o comando a baixo no console de sua wallet windows para dar start no masternode"
-echo "startmasternode alias false (nomedoalias)"
+echo "masternode start-alias "rotulo da wallet""
 echo "AGRADECIMENTOS A DIEGO NEVES DO SITE https://staking.world E A MATHEUS BACH, SEM ELES NAO SERIA POSSIVEL ESTE SCRYPT."
 echo "Att. Vinicius Ferreiro - Canal Bitnoob"
 mv ~/worldcryptoforum.sh ~/wcf
