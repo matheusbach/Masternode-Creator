@@ -11,6 +11,9 @@ sudo apt-get install unzip nano -y
 sudo apt-get install git
 sudo apt install rar
 
+#Caso der erro no unrar
+# sudo apt-add-repository multiverse && sudo apt-get update
+# rar e peg-linux-daemon.rar
 
 echo "Limpando arquivos de instalações anteriores..."
 sleep 3
