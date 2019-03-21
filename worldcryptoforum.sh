@@ -19,19 +19,27 @@ cd
 rm -r wcf
 rm -r .worldcryptoforum
 
+echo "Baixando arquivos de Pré-Atualização/Correção do node..."
+cd
+mkdir .worldcryptoforum
+cd .worldcryptoforum
+wget https://github.com/worldcryptoforum/worldcryptoforum/releases/download/v2.4/block_160004.zip
+unzip block_160004.zip
+rm -r block_160004.zip
 
 echo "Instalando Node..."
 sleep 3
 cd
 mkdir wcf
 cd wcf
-wget https://github.com/worldcryptoforum/worldcryptoforum/releases/download/v2.3/worldcryptoforum.linux.v2.3.zip
-unzip worldcryptoforum.linux.v2.3.zip
+wget https://github.com/worldcryptoforum/worldcryptoforum/releases/download/v2.4/worldcryptoforum.linux.v2.4.zip
+unzip worldcryptoforum.linux.v2.4.zip
 chmod +rwx worldcryptoforum-cli
 chmod +rwx worldcryptoforumd
 ./worldcryptoforumd &
-sleep 40
+sleep 20
 ./worldcryptoforum-cli stop
+
 
 ipvps=$(curl -s4 icanhazip.com)
 
