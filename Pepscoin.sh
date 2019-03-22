@@ -17,7 +17,7 @@ echo "Limpando arquivos de instalações anteriores..."
 sleep 3
 cd
 rm -r peps
-rm -r .worldcryptoforum
+rm -r .peps
 
 
 echo "Instalando Node..."
