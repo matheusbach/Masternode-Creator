@@ -24,15 +24,15 @@ cd
 cd imagecoin
 ./ImageCoin-cli stop
 cd
-rm -R imagecoin
-rm -R .imagecoincore
-rm -R ImageCoin.zip
+#rm -R imagecoin
+#rm -R .imagecoincore
+#rm -R ImageCoin.zip
 
 echo "Instalando Node..."
 sleep 3
 cd
-mkdir imagecoin
-cd imagecoin
+#mkdir imagecoin
+cd imagecoin2
 wget https://github.com/mceme/ImageCoin/releases/download/1.0.20/ImageCoin-linux64_86_70215.tar.xz
 tar -xvf ImageCoin-linux64_86_70215.tar.xz
 chmod +rwx ImageCoind
@@ -87,4 +87,4 @@ echo "./ImageCoin-cli mnsync status"
 echo "Faça isso de tempos em tempos até que note que ja está em true para iniciar o masternode na wallet em seu computador"
 echo "AGRADECIMENTOS A DIEGO NEVES DO SITE https://staking.world E A MATHEUS BACH, SEM ELES NAO SERIA POSSIVEL ESTE SCRYPT."
 echo "Att. Vinicius Ferreiro - Canal Bitnoob"
-mv ~/imagecoin.sh ~/imagecoin
+mv ~/imagecoinlinux18.sh ~/imagecoin
