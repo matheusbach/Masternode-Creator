@@ -24,15 +24,15 @@ cd
 cd imagecoin
 ./ImageCoin-cli stop
 cd
-#rm -R imagecoin
-#rm -R .imagecoincore
-#rm -R ImageCoin.zip
+rm -R imagecoin
+rm -R .imagecoincore
+rm -R ImageCoin.zip
 
 echo "Instalando Node..."
 sleep 3
 cd
-#mkdir imagecoin
-cd imagecoin2
+mkdir imagecoin
+cd imagecoin
 wget https://github.com/mceme/ImageCoin/releases/download/1.0.20/ImageCoin-linux64_86_70215.tar.xz
 tar -xvf ImageCoin-linux64_86_70215.tar.xz
 chmod +rwx ImageCoind
