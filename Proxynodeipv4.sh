@@ -29,7 +29,7 @@ mv ~/Linux/bin ~/prx
 mv ~/Linux.zip ~/prx
 rm -r Linux
 cd
-cd prxd
+cd prx
 ./prxd &
 sleep 20
 ./prx-cli stop
@@ -52,7 +52,7 @@ echo "server=1" >> ~/.prx/prx.conf
 echo "daemon=1" >> ~/.prx/prx.conf
 echo "maxconnections=256" >> ~/.prx/prx.conf
 echo "masternode=1" >> ~/.prx/prx.conf
-echo "bind="$ipvps >> ~/.prx/prx.conff
+echo "bind="$ipvps >> ~/.prx/prx.conf
 echo "masternodeaddr="$ipvps:12195 >> ~/.prx/prx.conf
 echo "logtimestamps=1" >> ~/.prx/prx.conf
 echo "port=12195" >> ~/.prx/prx.conf
