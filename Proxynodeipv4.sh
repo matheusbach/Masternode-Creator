@@ -28,6 +28,8 @@ unzip Linux.zip
 mv ~/Linux/bin ~/prx
 mv ~/Linux.zip ~/prx
 rm -r Linux
+cd
+cd prxd
 ./prxd &
 sleep 20
 ./prx-cli stop
