@@ -9,6 +9,14 @@ sleep 3
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
 sudo apt-get install git
+sudo apt-get update
+sudo apt-get upgrade 
+sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils
+sudo apt-get install libboost-all-dev
+sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo apt-get update
+sudo apt-get install libdb4.8-dev libdb4.8++-dev
+sudo apt-get install libminiupnpc-dev libzmq3-dev
 
 echo "Limpando arquivos de instalações anteriores..."
 sleep 3
@@ -25,8 +33,8 @@ sleep 3
 cd
 mkdir imagecoin
 cd imagecoin
-wget https://github.com/mceme/ImageCoin/releases/download/1.0.19/ImageCoin_linux18x86_64.tar.xz
-tar -xvf ImageCoin_linux18x86_64.tar.xz
+wget https://github.com/mceme/ImageCoin/releases/download/1.0.20/ImageCoin-linux64_86_70215.tar.xz
+tar -xvf ImageCoin-linux64_86_70215.tar.xz
 chmod +rwx ImageCoind
 chmod +rwx ImageCoin-cli
 ./ImageCoind &
@@ -39,14 +47,9 @@ echo "Seu ip é:"
 echo $ipvps
 echo "Qual sua Genkey ?"
 read genkey
-echo "Escreva um nome de usuario !"
-read user
-echo "Escreva uma senha !"
-read senha
-echo
 
-echo "rpcuser="$user >> ~/.imagecoincore/imagecoin.conf
-echo "rpcpassword="$senha >> ~/.imagecoincore/imagecoin.conf
+echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/.imagecoincore/imagecoin.conf
+echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/.imagecoincore/imagecoin.conf
 echo "daemon=1" >> ~/.imagecoincore/imagecoin.conf
 echo "staking=0" >> ~/.imagecoincore/imagecoin.conf
 echo "listen=1" >> ~/.imagecoincore/imagecoin.conf
@@ -58,29 +61,16 @@ echo "masternode=1" >> ~/.imagecoincore/imagecoin.conf
 echo "externalip="$ipvps >> ~/.imagecoincore/imagecoin.conf
 echo "masternodeprivkey="$genkey >> ~/.imagecoincore/imagecoin.conf
 echo "rcpport=6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=23.101.61.34" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=79.135.200.25:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=178.46.153.242:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=[2404:9400:10fc:a013::5]:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=[2001:0:9d38:78cf:2cbe:c268:373d:48ef]:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=[2002:96a5:c1e1::96a5:c1e1]:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=23.101.61.34" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=79.135.200.25:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=178.46.153.242:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=[2404:9400:10fc:a013::5]:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=[2001:0:9d38:78cf:2cbe:c268:373d:48ef]:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=[2002:96a5:c1e1::96a5:c1e1]:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=[2a03:4000:1a:699::1]:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=[2404:9400:10fc:a013::1e]:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=138.197.98.227:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=[2408:832e:2080:250:90d7:8a11:349b:25de]:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=[2002:4f87:c81c::4f87:c81c]:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=[2001:0:9d38:6abd:2894:9825:4517:5408]:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=[2002:96a5:c129::96a5:c129]:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=[2002:96a5:c1e1::96a5:c1e1]:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=[2001:0:9d38:6abd:24ed:3744:888f:6ee]:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=[2804:7f5:938a:df86:84aa:516f:cce5:a2f3]:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "addnode=5.189.162.110:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=23.101.61.34:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=188.166.98.130:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=68.183.126.109:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=134.209.124.204:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=192.241.175.194:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=155.138.209.168:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=51.158.67.174:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=163.172.129.136:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=165.227.0.25:6998" >> ~/.imagecoincore/imagecoin.conf
+echo "addnode=138.197.101.155:6998" >> ~/.imagecoincore/imagecoin.conf
 
 echo "Iniciando Masternode..."
 sleep 3
