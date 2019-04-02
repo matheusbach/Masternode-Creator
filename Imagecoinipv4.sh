@@ -79,8 +79,6 @@ echo "addnode=51.158.67.174:6998" >> ~/.imagecoincore/imagecoin.conf
 echo "addnode=163.172.129.136:6998" >> ~/.imagecoincore/imagecoin.conf
 echo "addnode=165.227.0.25:6998" >> ~/.imagecoincore/imagecoin.conf
 echo "addnode=138.197.101.155:6998" >> ~/.imagecoincore/imagecoin.conf
-echo "checkblocks=6" >> ~/.imagecoincore/imagecoin.conf
-echo "checklevel=2" >> ~/.imagecoincore/imagecoin.conf
 
 echo "Iniciando Masternode..."
 sleep 3
