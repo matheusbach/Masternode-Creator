@@ -46,8 +46,8 @@ echo $ipvps
 echo "Qual sua Genkey ?"
 read genkey
 
-echo "rpcuser=pegasusrpc" >> ~/.pegasus/pegasus.conf
-echo "rpcpassword=E8b5m8Q1mfkUzpJuuGZL4YtFUSk48yvAfCuVKSAGYAaB" >> ~/.pegasus/pegasus.conf
+echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/.pegasus/pegasus.conf
+echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/.pegasus/pegasus.conf
 echo "daemon=1" >> ~/.pegasus/pegasus.conf
 echo "staking=0" >> ~/.pegasus/pegasus.conf
 echo "listen=1" >> ~/.pegasus/pegasus.conf
