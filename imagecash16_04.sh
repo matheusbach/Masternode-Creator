@@ -2,13 +2,21 @@
 cd
 echo "BEM VINDO AOS SCRYPTS DO CANAL BITNOOB!!!"
 sleep 3 
-echo "Será iniciado a Instalação/Montagem do Masternode de Imagecash v1.0 para linux 18.04"
+echo "Será iniciado a Instalação/Montagem do Masternode de Imagecash v1.1 para linux 16.04"
 sleep 3
 echo "Instalando Pré-Requisitos..."
 sleep 3 
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
 sudo apt-get install git
+sudo apt-get update
+sudo apt-get upgrade 
+sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils
+sudo apt-get install libboost-all-dev
+sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo apt-get update
+sudo apt-get install libdb4.8-dev libdb4.8++-dev
+sudo apt-get install libminiupnpc-dev libzmq3-dev
 
 echo "Limpando arquivos de instalações anteriores..."
 sleep 3
@@ -22,14 +30,15 @@ rm -R .imgcashcore
 echo "Instalando Node..."
 sleep 3
 cd
-mkdir imagecash
-cd imagecash
-wget https://github.com/mceme/ImageCash/releases/download/1.10/imgcash-linux86x64.tar.xz
-tar -xvf imgcash-linux86x64.tar.xz
+git clone https://github.com/circulosmeos/gdown.pl.git
+cd gdown.pl
+./gdown.pl https://drive.google.com/file/d/1TzBbqHACKiBQy_flGIXveK9m8zyk3_Gp/view?usp=sharing imgc
+mv imgc ~/imgc
+cd imgc
 chmod +rwx imgcashd
 chmod +rwx imgcash-cli
 ./imgcashd &
-sleep 40
+sleep 20
 ./imgcash-cli stop
 
 ipvps=$(curl -s4 icanhazip.com)
@@ -38,14 +47,9 @@ echo "Seu ip é:"
 echo $ipvps
 echo "Qual sua Genkey ?"
 read genkey
-echo "Escreva um nome de usuario !"
-read user
-echo "Escreva uma senha !"
-read senha
-echo
 
-echo "rpcuser="$user >> ~/.imgcashcore/imgcash.conf
-echo "rpcpassword="$senha >> ~/.imgcashcore/imgcash.conf
+echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/.imgcashcore/imgcash.conf
+echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/.imgcashcore/imgcash.conf
 echo "daemon=1" >> ~/.imgcashcore/imgcash.conf
 echo "staking=0" >> ~/.imgcashcore/imgcash.conf
 echo "listen=1" >> ~/.imgcashcore/imgcash.conf
@@ -79,4 +83,4 @@ echo "./imgcash-cli mnsync status"
 echo "Faça isso de tempos em tempos até que note que ja está em true para iniciar o masternode na wallet em seu computador"
 echo "AGRADECIMENTOS A DIEGO NEVES DO SITE https://staking.world E A MATHEUS BACH, SEM ELES NAO SERIA POSSIVEL ESTE SCRYPT."
 echo "Att. Vinicius Ferreiro - Canal Bitnoob"
-mv ~/imagecash.sh ~/imagecash
+mv ~/imagecash16_04.sh ~/imagecash
