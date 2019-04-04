@@ -38,8 +38,8 @@ echo $ipvps
 echo "Qual sua Genkey ?"
 read genkey
 
-echo "rpcuser=pepsrpc" >> ~/.peps/peps.conf
-echo "rpcpassword=8CbcPojumn8i14cK5WzE3EYFAPJK78YtELVUbUHDmTsW" >> ~/.peps/peps.conf
+echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/.peps/peps.conf
+echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/.peps/peps.conf
 echo "rpcport=16262" >> ~/.peps/peps.conf
 echo "externalip="$ipvps >> ~/.peps/peps.conf
 echo "masternodeprivkey="$genkey >> ~/.peps/peps.conf
