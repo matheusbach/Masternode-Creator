@@ -3,7 +3,7 @@
 cd
 echo "BEM VINDO AOS SCRYPTS DO CANAL BITNOOB!!!"
 sleep 3 
-echo "Será iniciado a Instalação/Montagem do Masternode de Imagecoin v1.0"
+echo "Será iniciado a Instalação/Montagem do Masternode de Wcf v1.1"
 sleep 3
 echo "Instalando Pré-Requisitos..."
 sleep 3 
@@ -48,8 +48,8 @@ echo $ipvps
 echo "Qual sua Genkey ?"
 read genkey
 
-echo "rpcuser=worldcryptoforumrpc" >> ~/.worldcryptoforum/worldcryptoforum.conf
-echo "rpcpassword=AUNq1FGXfRsdFkKG87CR61hjrddoeR6DzyuevpXaYWDQ" >> ~/.worldcryptoforum/worldcryptoforum.conf
+echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/.worldcryptoforum/worldcryptoforum.conf
+echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/.worldcryptoforum/worldcryptoforum.conf
 echo "externalip="$ipvps >> ~/.worldcryptoforum/worldcryptoforum.conf
 echo "masternodeprivkey="$genkey >> ~/.worldcryptoforum/worldcryptoforum.conf
 echo "rpcallowip=127.0.0.1" >> ~/.worldcryptoforum/worldcryptoforum.conf
