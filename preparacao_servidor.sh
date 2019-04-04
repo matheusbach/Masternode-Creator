@@ -22,14 +22,14 @@ apt-get install fail2ban -y
 apt-get install pwgen
 apt-get install libzmq3-dev
 
-cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local
-cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+#cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local
+#cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 
-fallocate -l 5G /mnt/5000MB.swap
-chmod 600 /mnt/5000MB.swap
-mkswap /mnt/5000MB.swap
-swapon /mnt/5000MB.swap
-echo '/mnt/5000MB.swap none swap sw 0 0' | sudo tee -a /etc/fstab
+#fallocate -l 5G /mnt/5000MB.swap
+#chmod 600 /mnt/5000MB.swap
+#mkswap /mnt/5000MB.swap
+#swapon /mnt/5000MB.swap
+#echo '/mnt/5000MB.swap none swap sw 0 0' | sudo tee -a /etc/fstab
 
 ufw default deny incoming
 ufw default allow outgoing
