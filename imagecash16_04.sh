@@ -21,10 +21,10 @@ sudo apt-get install libminiupnpc-dev libzmq3-dev
 echo "Limpando arquivos de instalações anteriores..."
 sleep 3
 cd
-cd imagecash
+cd imgc
 ./imgcash-cli stop
 cd
-rm -R imagecash
+rm -R imgc
 rm -R .imgcashcore
 
 echo "Instalando Node..."
@@ -32,8 +32,11 @@ sleep 3
 cd
 git clone https://github.com/circulosmeos/gdown.pl.git
 cd gdown.pl
-./gdown.pl https://drive.google.com/file/d/1TzBbqHACKiBQy_flGIXveK9m8zyk3_Gp/view?usp=sharing imgc
+./gdown.pl https://drive.google.com/file/d/1TzBbqHACKiBQy_flGIXveK9m8zyk3_Gp/view?usp=sharing imgc.zip
+unzip imgc.zip
 mv imgc ~/imgc
+mv imgc.zip ~/imgc
+cd
 cd imgc
 chmod +rwx imgcashd
 chmod +rwx imgcash-cli
@@ -71,16 +74,16 @@ echo "addnode=51.75.47.131:6888" >> ~/.imgcashcore/imgcash.conf
 echo "Iniciando Masternode..."
 sleep 3
 cd 
-cd imagecash
+cd imgc
 ./imgcashd &
 sleep 30
 ./imgcash-cli mnsync status
 echo "Se os parametros foram true e a transação na wallet do seu computador ja estiver confirmada, pode iniciar o Masternode"
 echo "Caso não for true, aguarde mais alguns minutos e use os comandos"
 echo "cd"
-echo "cd imagecash"
+echo "cd imgc"
 echo "./imgcash-cli mnsync status"
 echo "Faça isso de tempos em tempos até que note que ja está em true para iniciar o masternode na wallet em seu computador"
 echo "AGRADECIMENTOS A DIEGO NEVES DO SITE https://staking.world E A MATHEUS BACH, SEM ELES NAO SERIA POSSIVEL ESTE SCRYPT."
 echo "Att. Vinicius Ferreiro - Canal Bitnoob"
-mv ~/imagecash16_04.sh ~/imagecash
+mv ~/imagecash16_04.sh ~/imgc
