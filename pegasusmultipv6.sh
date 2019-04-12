@@ -25,8 +25,8 @@ chmod +rwx pegasus-cli
 sleep 40
 ./pegasus-cli stop
 
-echo "Seu ip é:"
-echo ipv6
+echo "Qual seu IPv6 ?"
+read ipv6
 echo "Qual sua Genkey ?"
 read genkey
 echo "Qual rpcport usar ? MN1-1617 MN2-1618 MN3-1619 MN4-1620"
