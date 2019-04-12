@@ -69,4 +69,4 @@ echo "Deverá usar o comando a baixo no console de sua wallet windows para dar s
 echo "startmasternode alias false (nomedoalias)"
 echo "AGRADECIMENTOS A DIEGO NEVES DO SITE https://staking.world E A MATHEUS BACH, SEM ELES NAO SERIA POSSIVEL ESTE SCRYPT."
 echo "Att. Vinicius Ferreiro - Canal Bitnoob"
-mv ~/pegasus.sh ~/pegasuscoin
+mv ~/pegasusmultipv6.sh ~/pegasuscoin
