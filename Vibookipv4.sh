@@ -50,14 +50,10 @@ echo "Seu ip é:"
 echo $ipvps
 echo "Qual sua Genkey ?"
 read genkey
-echo "Escreva um nome de usuario !"
-read user
-echo "Escreva uma senha !"
-read senha
 echo
 
-echo "rpcuser="$user >> ~/.vibook/vibook.conf
-echo "rpcpassword="$senha >> ~/.vibook/vibook.conf
+echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/.vibook/vibook.conf
+echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/.vibook/vibook.conf
 echo "rpcport=22262" >> ~/.vibook/vibook.conf
 echo "externalip="$ipvps >> ~/.vibook/vibook.conf
 echo "masternodeprivkey="$genkey >> ~/.vibook/vibook.conf
