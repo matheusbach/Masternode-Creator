@@ -68,6 +68,10 @@ echo "addnode=23.101.61.34:6888" >> ~/.imgcashcore/imgcash.conf
 echo "addnode=104.238.171.10:6888" >> ~/.imgcashcore/imgcash.conf
 echo "addnode=45.76.47.138:6888" >> ~/.imgcashcore/imgcash.conf
 echo "addnode=51.75.47.131:6888" >> ~/.imgcashcore/imgcash.conf
+echo "addnode=89.40.126.147:6888" >> ~/.imgcashcore/imgcash.conf
+echo "addnode=94.177.231.139:6888" >> ~/.imgcashcore/imgcash.conf
+echo "addnode=217.61.108.79:6888" >> ~/.imgcashcore/imgcash.conf
+echo "addnode=217.61.104.163:6888" >> ~/.imgcashcore/imgcash.conf
 
 
 
