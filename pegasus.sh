@@ -12,11 +12,11 @@ sudo apt-get install git
 sudo apt install rar
 
 #Caso der erro no unrar
-# sudo apt-add-repository multiverse && sudo apt-get update
-# sudo apt-get install rar unrar
+sudo apt-add-repository multiverse && sudo apt-get update
+sudo apt-get install rar unrar
 
 # Caso erro de libdb4.8-dev
-# sudo apt-get install libdb4.8-dev libdb4.8++-dev
+sudo apt-get install libdb4.8-dev libdb4.8++-dev
 
 
 echo "Limpando arquivos de instalações anteriores..."
