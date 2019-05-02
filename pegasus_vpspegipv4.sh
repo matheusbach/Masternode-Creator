@@ -2,7 +2,7 @@
 cd
 echo "BEM VINDO AOS SCRYPTS DO CANAL BITNOOB!!!"
 sleep 3 
-echo "Será iniciado a Instalação/Montagem do Masternode de Imagecoin v1.0"
+echo "Será iniciado a Instalação/Montagem do Masternode de Imagecoin v2.0"
 sleep 3
 echo "Instalando Pré-Requisitos..."
 sleep 3 
@@ -10,35 +10,38 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
 sudo apt-get install git
 sudo apt install rar
+apt-get update >/dev/null 2>&1
+apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" make software-properties-common \
+build-essential libtool autoconf libssl-dev libboost-dev libboost-chrono-dev libboost-filesystem-dev libboost-program-options-dev \
+libboost-system-dev libboost-test-dev libboost-thread-dev sudo automake git wget curl libdb4.8-dev bsdmainutils libdb4.8++-dev \
+libminiupnpc-dev libgmp3-dev ufw pkg-config libevent-dev>/dev/null 2>&1
 
-#Caso der erro no unrar
-sudo apt-add-repository multiverse && sudo apt-get update
-sudo apt-get install rar unrar
-
-# Caso erro de libdb4.8-dev
-sudo apt-get install libdb4.8-dev libdb4.8++-dev
 
 
 echo "Limpando arquivos de instalações anteriores..."
 sleep 3
 cd
+rm -r peg
 rm -r .pegasus
 rm -r pegasuscoin
 rm -r peg-linux-daemon.rar
+rm -r /usr/local/bin/pegasus-cli
+rm -r /usr/local/bin/pegasusd
 
 echo "Instalando Node..."
 sleep 3
 cd
-mkdir pegasuscoin
-cd pegasuscoin
-wget https://github.com/peg-dev/pegasus/releases/download/V1/peg-linux-daemon.rar
-rar e peg-linux-daemon.rar
-chmod +rwx pegasusd
-chmod +rwx pegasus-cli
+wget https://github.com/peg-dev/pegasus/releases/download/V3.0.0.2/peg-linux-daemon-for-peg-vps.tar
+tar -xvf peg-linux-daemon-for-peg-vps.tar
+mv peg-linux-daemon-for-peg-vps ~/peg
+mv peg-linux-daemon-for-peg-vps.tar ~/peg
+cd
+cd peg
+#cp pegasus-cli /usr/local/bin
+#cp pegasusd /usr/local/bin
 ./pegasusd &
 sleep 40
 ./pegasus-cli stop
-
 ipvps=$(curl -s4 icanhazip.com)
 
 echo "Seu ip é:"
@@ -69,7 +72,7 @@ echo "addnode=213.141.134.205:1515" >> ~/.pegasus/pegasus.conf
 echo "Iniciando Masternode..."
 sleep 3
 cd 
-cd pegasuscoin
+cd peg
 ./pegasusd &
 sleep 30
 ./pegasus-cli mnsync status
