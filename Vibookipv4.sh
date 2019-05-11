@@ -109,9 +109,9 @@ echo "addnode=185.231.69.112:22262" >> ~/.vibook/vibook.conf
 echo "Baixando bootstrap..."
 cd
 cd .vibook
-wget https://github.com/VibookCoin/vibook/releases/download/v2.2.0/bootstrap_25032019.zip
-unzip bootstrap_25032019.zip
-rm -r bootstrap_25032019.zip
+wget https://github.com/VibookCoin/vibook/releases/download/v2.2.0/bootstrap-18042019.zip
+unzip bootstrap-18042019.zip
+rm -r bootstrap-18042019.zip
 
 echo "Iniciando Masternode..."
 sleep 3
