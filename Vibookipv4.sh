@@ -38,8 +38,8 @@ sleep 3
 cd
 mkdir vibook
 cd vibook
-wget https://github.com/VibookCoin/vibook/releases/download/v1.1.1/ViBOOK-1.1.1-aarch64-linux-gnu.zip
-unzip ViBOOK-1.1.1-aarch64-linux-gnu.zip
+wget https://github.com/VibookCoin/vibook/releases/download/v1.1.1/ViBOOK-1.1.1-x86_64-pc-linux-gnu.zip
+unzip ViBOOK-1.1.1-x86_64-pc-linux-gnu.zip
 ./vibookd &
 sleep 20
 ./vibook-cli stop
