@@ -23,13 +23,13 @@ rm -r .prx
 echo "Instalando Node..."
 sleep 3
 cd
-wget https://github.com/ProxyNode/proxynode/releases/download/v1.0.0/Linux.zip
-unzip Linux.zip
-mv ~/Linux/bin ~/prx
-mv ~/Linux.zip ~/prx
-rm -r Linux
-cd
+mkdir prx
 cd prx
+wget https://github.com/ProxyNode/proxynode/releases/download/v2.0.0/Proxynode-Linux-MN-v2.0.0.zip
+unzip Proxynode-Linux-MN-v2.0.0.zip
+chmod +rwx prxd
+chmod +rwx prx-cli
+chmod +rwx prx-tx
 ./prxd &
 sleep 20
 ./prx-cli stop
@@ -41,22 +41,22 @@ echo $ipvps
 echo "Qual sua Genkey ?"
 read genkey
 
-echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/.prx/prx.conf
-echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/.prx/prx.conf
-echo "rpcport=12196" >> ~/.prx/prx.conf
-echo "externalip="$ipvps >> ~/.prx/prx.conf
-echo "masternodeprivkey="$genkey >> ~/.prx/prx.conf
-echo "rpcallowip=127.0.0.1" >> ~/.prx/prx.conf
-echo "listen=1" >> ~/.prx/prx.conf
-echo "server=1" >> ~/.prx/prx.conf
-echo "daemon=1" >> ~/.prx/prx.conf
-echo "maxconnections=256" >> ~/.prx/prx.conf
-echo "masternode=1" >> ~/.prx/prx.conf
-echo "bind="$ipvps >> ~/.prx/prx.conf
-echo "masternodeaddr="$ipvps:12195 >> ~/.prx/prx.conf
-echo "logtimestamps=1" >> ~/.prx/prx.conf
-echo "port=12195" >> ~/.prx/prx.conf
-curl https://raw.githubusercontent.com/ProxyNode/proxynode/master/addnodes.txt >> ~/.prx/prx.conf
+echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/.Prx/prx.conf
+echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/.Prx/prx.conf
+echo "rpcport=12196" >> ~/.Prx/prx.conf
+echo "externalip="$ipvps >> ~/.Prx/prx.conf
+echo "masternodeprivkey="$genkey >> ~/.Prx/prx.conf
+echo "rpcallowip=127.0.0.1" >> ~/.Prx/prx.conf
+echo "listen=1" >> ~/.Prx/prx.conf
+echo "server=1" >> ~/.Prx/prx.conf
+echo "daemon=1" >> ~/.Prx/prx.conf
+echo "maxconnections=256" >> ~/.Prx/prx.conf
+echo "masternode=1" >> ~/.Prx/prx.conf
+echo "bind="$ipvps >> ~/.Prx/prx.conf
+echo "masternodeaddr="$ipvps:12195 >> ~/.Prx/prx.conf
+echo "logtimestamps=1" >> ~/.Prx/prx.conf
+echo "port=12195" >> ~/.Prx/prx.conf
+curl https://raw.githubusercontent.com/ProxyNode/proxynode/master/addnodes.txt >> ~/.Prx/prx.conf
 
 echo "Iniciando Masternode..."
 sleep 3
