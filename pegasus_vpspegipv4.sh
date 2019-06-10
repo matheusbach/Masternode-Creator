@@ -31,12 +31,10 @@ rm -r /usr/local/bin/pegasusd
 echo "Instalando Node..."
 sleep 3
 cd
-wget https://github.com/peg-dev/pegasus/releases/download/V3.0.0.2/peg-linux-daemon-for-peg-vps.tar
-tar -xvf peg-linux-daemon-for-peg-vps.tar
-mv peg-linux-daemon-for-peg-vps ~/peg
-mv peg-linux-daemon-for-peg-vps.tar ~/peg
-cd
+mkdir peg
 cd peg
+wget https://github.com/peg-dev/pegasus/releases/download/V3.0.0.2/peg-linux-daemon-64Bit-v3.0.0.2.tar.gz
+tar -xvf peg-linux-daemon-64Bit-v3.0.0.2.tar.gz
 #cp pegasus-cli /usr/local/bin
 #cp pegasusd /usr/local/bin
 ./pegasusd &
@@ -79,11 +77,11 @@ sleep 30
 echo "Se os parametros foram true e a transação na wallet do seu computador ja estiver confirmada, pode iniciar o Masternode"
 echo "Caso não for true, aguarde mais alguns minutos e use os comandos"
 echo "cd"
-echo "cd pegasuscoin"
+echo "cd peg"
 echo "./pegasus-cli mnsync status"
 echo "Faça isso de tempos em tempos até que note que ja está em true para iniciar o masternode na wallet em seu computador"
 echo "Deverá usar o comando a baixo no console de sua wallet windows para dar start no masternode"
 echo "startmasternode alias false (nomedoalias)"
 echo "AGRADECIMENTOS A DIEGO NEVES DO SITE https://staking.world E A MATHEUS BACH, SEM ELES NAO SERIA POSSIVEL ESTE SCRYPT."
 echo "Att. Vinicius Ferreiro - Canal Bitnoob"
-mv ~/pegasus.sh ~/pegasuscoin
+mv ~/pegasus_vpspegipv4.sh ~/peg
