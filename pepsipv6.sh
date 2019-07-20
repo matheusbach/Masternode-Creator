@@ -42,8 +42,8 @@ read portarpc
 
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/.peps/peps.conf
 echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/.peps/peps.conf
-echo "rpcport="portarpc >> ~/.peps/peps.conf
-echo "externalip="ipvps >> ~/.peps/peps.conf
+echo "rpcport="$portarpc >> ~/.peps/peps.conf
+echo "externalip="$ipvps >> ~/.peps/peps.conf
 echo "masternodeprivkey="$genkey >> ~/.peps/peps.conf
 echo "rpcallowip=127.0.0.1" >> ~/.peps/peps.conf
 echo "listen=1" >> ~/.peps/peps.conf
@@ -51,7 +51,7 @@ echo "server=1" >> ~/.peps/peps.conf
 echo "daemon=1" >> ~/.peps/peps.conf
 echo "masternode=1" >> ~/.peps/peps.conf
 echo "bind="$ipvps >> ~/.peps/peps.conf
-echo "masternodeaddr="$ipvps:15252 >> ~/.peps/peps.conf
+echo "masternodeaddr="$ipvps >> ~/.peps/peps.conf
 echo "logtimestamps=1" >> ~/.peps/peps.conf
 echo "port=15252" >> ~/.peps/peps.conf
 
