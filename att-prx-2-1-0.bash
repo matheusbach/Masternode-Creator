@@ -39,7 +39,7 @@ cd
 echo "Iniciando node atualizado..."
 cd prx
 ./prxd &
-sleep 5
+sleep 15
 ./prx-cli getinfo
 cd
 
@@ -48,4 +48,4 @@ echo "cd prx"
 echo "./prx-cli masternode status"
 
 cd
-mv ~/att-prx-2-1-0.sh ~/prx
+mv ~/att-prx-2-1-0.bash ~/prx
