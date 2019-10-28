@@ -54,6 +54,15 @@ echo "masternodeaddr="$ipvps >> ~/.peps/peps.conf
 echo "logtimestamps=1" >> ~/.peps/peps.conf
 echo "port=15252" >> ~/.peps/peps.conf
 
+echo "Baixando Bootstrap..."
+sleep 3
+cd
+git clone https://github.com/circulosmeos/gdown.pl.git
+cd .peps
+~/gdown.pl/gdown.pl https://drive.google.com/file/d/1ZbNxHtGvIXQvV4fgP-P5Eb-Pv2aXBKRZ/view?usp=sharing bspeps.zip
+unzip bspeps.zip
+rm -r bspeps.zip
+cd
 
 echo "Iniciando Masternode..."
 sleep 3
