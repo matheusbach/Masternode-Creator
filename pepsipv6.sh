@@ -59,7 +59,7 @@ sleep 3
 cd
 git clone https://github.com/circulosmeos/gdown.pl.git
 cd .peps
-~/gdown.pl/gdown.pl https://drive.google.com/file/d/1z4qIQdqP93AjPf4Ke87pChFSozX-zv3i/view?usp=sharing peps.zip
+~/gdown.pl/gdown.pl https://drive.google.com/file/d/1PxUOYBvJ_uu-D0aGyNmcEefIh8qVHAvX/view?usp=sharing peps.zip
 unzip peps.zip
 rm -r peps.zip
 cd
@@ -83,4 +83,4 @@ echo "Deverá usar o comando a baixo no console de sua wallet windows para dar s
 echo "startmasternode alias false (nomedoalias)"
 echo "AGRADECIMENTOS A DIEGO NEVES DO SITE https://staking.world E A MATHEUS BACH, SEM ELES NAO SERIA POSSIVEL ESTE SCRYPT."
 echo "Att. Vinicius Ferreiro - Canal Bitnoob"
-mv ~/pepsipv6.sh ~/peps
+rm -r pepsipv6.sh
