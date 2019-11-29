@@ -59,9 +59,9 @@ sleep 3
 cd
 git clone https://github.com/circulosmeos/gdown.pl.git
 cd .peps
-~/gdown.pl/gdown.pl https://drive.google.com/file/d/1ZbNxHtGvIXQvV4fgP-P5Eb-Pv2aXBKRZ/view?usp=sharing bspeps.zip
-unzip bspeps.zip
-rm -r bspeps.zip
+~/gdown.pl/gdown.pl https://drive.google.com/file/d/1z4qIQdqP93AjPf4Ke87pChFSozX-zv3i/view?usp=sharing peps.zip
+unzip peps.zip
+rm -r peps.zip
 cd
 
 echo "Iniciando Masternode..."
