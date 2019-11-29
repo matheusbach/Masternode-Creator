@@ -68,6 +68,8 @@ echo "Iniciando Masternode..."
 sleep 3
 cd 
 cd peps
+rm -r peps-daemon.zip
+rm -r pepsipv6.sh
 ./pepsd -listen=1
 sleep 30
 ./peps-cli mnsync status
