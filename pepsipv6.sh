@@ -27,7 +27,7 @@ mkdir peps
 cd peps
 wget https://github.com/PEPS-Project/peps/releases/download/v2.3-rev2/peps-daemon.zip
 unzip peps-daemon.zip
-./pepsd -listen=1
+./pepsd -listen=0
 sleep 20
 ./peps-cli stop
 
@@ -36,7 +36,7 @@ echo "Seu ipv6 é:"
 read ipvps
 echo "Qual sua Genkey ?"
 read genkey
-echo "Escolha uma rpcport, root1=16263, root2=16264, root3=16265, root4=16266"
+echo "Digite uma rpcport!"
 read portarpc
 
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/.peps/peps.conf
@@ -59,7 +59,7 @@ sleep 3
 cd
 git clone https://github.com/circulosmeos/gdown.pl.git
 cd .peps
-~/gdown.pl/gdown.pl https://drive.google.com/file/d/1PxUOYBvJ_uu-D0aGyNmcEefIh8qVHAvX/view?usp=sharing peps.zip
+~/gdown.pl/gdown.pl https://drive.google.com/file/d/1pNJF6uu5e9n8rPScqvIRjcqDt0qozn-v/view?usp=sharing peps.zip
 unzip peps.zip
 rm -r peps.zip
 cd
@@ -70,7 +70,7 @@ cd
 cd peps
 rm -r peps-daemon.zip
 rm -r pepsipv6.sh
-./pepsd -listen=1
+./pepsd -listen=0
 sleep 30
 ./peps-cli mnsync status
 echo "Se os parametros foram true e a transação na wallet do seu computador ja estiver confirmada, pode iniciar o Masternode"
