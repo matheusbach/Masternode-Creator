@@ -31,8 +31,15 @@ unzip peps-daemon.zip
 sleep 20
 ./peps-cli stop
 cd
+
+echo "Baixando Bootstrap..."
+sleep 3
+cd
+git clone https://github.com/circulosmeos/gdown.pl.git
 cd .peps
-rm -r peps.conf
+~/gdown.pl/gdown.pl https://drive.google.com/file/d/1MUKKG6Ray_JWu_B9Qhiz1HhgnwPhgf8z/view peps.zip
+unzip peps.zip
+rm -r peps.zip
 cd
 
 echo "Seu ipv6 é:"
@@ -62,16 +69,6 @@ echo "addnode=45.76.124.236" >> ~/.peps/peps.conf
 echo "addnode=149.28.158.224" >> ~/.peps/peps.conf
 echo "addnode=149.28.158.213" >> ~/.peps/peps.conf
 echo "addnode=149.28.146.115" >> ~/.peps/peps.conf
-
-echo "Baixando Bootstrap..."
-sleep 3
-cd
-git clone https://github.com/circulosmeos/gdown.pl.git
-cd .peps
-~/gdown.pl/gdown.pl https://drive.google.com/file/d/1MUKKG6Ray_JWu_B9Qhiz1HhgnwPhgf8z/view peps.zip
-unzip peps.zip
-rm -r peps.zip
-cd
 
 echo "Iniciando Masternode..."
 sleep 3
