@@ -59,7 +59,7 @@ sleep 3
 cd
 git clone https://github.com/circulosmeos/gdown.pl.git
 cd .peps
-~/gdown.pl/gdown.pl https://drive.google.com/file/d/1pNJF6uu5e9n8rPScqvIRjcqDt0qozn-v/view?usp=sharing peps.zip
+~/gdown.pl/gdown.pl https://drive.google.com/file/d/1MUKKG6Ray_JWu_B9Qhiz1HhgnwPhgf8z/view peps.zip
 unzip peps.zip
 rm -r peps.zip
 cd
@@ -67,9 +67,9 @@ cd
 echo "Iniciando Masternode..."
 sleep 3
 cd 
+rm -r pepsipv6.sh
 cd peps
 rm -r peps-daemon.zip
-rm -r pepsipv6.sh
 ./pepsd -listen=0
 sleep 30
 ./peps-cli mnsync status
@@ -83,4 +83,3 @@ echo "Deverá usar o comando a baixo no console de sua wallet windows para dar s
 echo "startmasternode alias false (nomedoalias)"
 echo "AGRADECIMENTOS A DIEGO NEVES DO SITE https://staking.world E A MATHEUS BACH, SEM ELES NAO SERIA POSSIVEL ESTE SCRYPT."
 echo "Att. Vinicius Ferreiro - Canal Bitnoob"
-rm -r pepsipv6.sh
