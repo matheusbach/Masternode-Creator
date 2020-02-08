@@ -30,7 +30,10 @@ unzip peps-daemon.zip
 ./pepsd -listen=0
 sleep 20
 ./peps-cli stop
-
+cd
+cd .peps
+rm -r peps.conf
+cd
 
 echo "Seu ipv6 é:"
 read ipvps
@@ -53,6 +56,12 @@ echo "bind="$ipvps >> ~/.peps/peps.conf
 echo "masternodeaddr="$ipvps >> ~/.peps/peps.conf
 echo "logtimestamps=1" >> ~/.peps/peps.conf
 echo "port=15252" >> ~/.peps/peps.conf
+echo "mnconflock=1" >> ~/.peps/peps.conf
+echo "addnode=95.164.8.207" >> ~/.peps/peps.conf
+echo "addnode=45.76.124.236" >> ~/.peps/peps.conf
+echo "addnode=149.28.158.224" >> ~/.peps/peps.conf
+echo "addnode=149.28.158.213" >> ~/.peps/peps.conf
+echo "addnode=149.28.146.115" >> ~/.peps/peps.conf
 
 echo "Baixando Bootstrap..."
 sleep 3
